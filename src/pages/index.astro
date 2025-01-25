@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { GithubSearch } from '../module/GithubSearch';
+
+---
+<Layout>
+  <div class="container mx-auto">
+    <div class="p-2 my-10">
+      <GithubSearch client:only="react" />
+    </div>
+  </div>
+</Layout>
