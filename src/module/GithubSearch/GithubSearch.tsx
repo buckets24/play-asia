@@ -42,8 +42,8 @@ const GithubSearch: React.FC = () => {
   }, [debouncedUsername]);
 
   return (
-    <div data-astro-module="GithubSearch" className="grid grid-cols-12 gap-4">
-      <div data-id="search-container" className="col-span-12 md:col-span-3">
+    <div data-astro-module="GithubSearch" className="grid grid-cols-12 gap-4 md:max-w-xl md:mx-auto lg:max-w-6xl">
+      <div data-id="search-container" className="col-span-12 lg:col-span-3">
         <h2 className="text-xl font-bold mb-2">GitHub Profile Search</h2>
         <div className="mb-4">
           <input
@@ -56,7 +56,7 @@ const GithubSearch: React.FC = () => {
         </div>
         {error && <p className="text-red-500">{error}</p>}
       </div>
-      <div data-id="profile-container" className="col-span-12 md:col-span-9">
+      <div data-id="profile-container" className="col-span-12 lg:col-span-9">
         {profile && (
           <div className="flex items-center justify-center gap-6 p-4 rounded-xl shadow-lg">
             {isLoading ? (
